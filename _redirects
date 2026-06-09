@@ -1,0 +1,15 @@
+# www -> apex
+https://www.eapacksmt5.com/* https://eapacksmt5.com/:splat 301!
+
+# legacy / aliases
+/terms              /termos              301
+/privacy            /privacidade         301
+/refund             /reembolso           301
+/risk-disclaimer    /disclaimer-risco    301
+/refund-how-to      /como-pedir-reembolso 301
+
+# Atalhos de checkout (CTAs internos do tipo /comprar/trader → página do pack)
+/comprar/starter    /produtos/pack-starter  301
+/comprar/trader     /produtos/pack-trader   301
+/comprar/pro        /produtos/pack-pro      301
+/disclaimer         /disclaimer-risco       301

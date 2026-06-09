@@ -1,0 +1,21 @@
+/*
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://r.wdfl.co https://static.cloudflareinsights.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https://r.wdfl.co https://app.mailerlite.com; frame-src https://www.mql5.com https://checkout.stripe.com https://billing.stripe.com; base-uri 'self'; form-action 'self' https://checkout.stripe.com https://billing.stripe.com https://app.mailerlite.com; frame-ancestors 'none'; upgrade-insecure-requests
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-site
+  X-DNS-Prefetch-Control: on
+
+# Cache estático longo para assets versionados (Astro adiciona hash no nome)
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML: revalidação curta para permitir updates rápidos
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
